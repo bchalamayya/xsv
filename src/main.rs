@@ -1,8 +1,5 @@
-/*!
-These are some docs.
-*/
-
-#![allow(deprecated)] // for connect -> join rename
+#![allow(deprecated)]
+#![allow(dead_code)]
 
 extern crate byteorder;
 extern crate chan;
@@ -139,26 +136,26 @@ Please choose one of the following commands:",
 
 #[derive(Debug, RustcDecodable)]
 enum Command {
-    Cat,
+    // Cat,
     Count,
-    FixLengths,
-    Flatten,
-    Fmt,
-    Frequency,
-    Headers,
-    Help,
-    Index,
-    Input,
-    Join,
-    Partition,
-    Sample,
-    Search,
-    Select,
-    Slice,
-    Sort,
-    Split,
-    Stats,
-    Table,
+    // FixLengths,
+    // Flatten,
+    // Fmt,
+    // Frequency,
+    // Headers,
+    // Help,
+    // Index,
+    // Input,
+    // Join,
+    // Partition,
+    // Sample,
+    // Search,
+    // Select,
+    // Slice,
+    // Sort,
+    // Split,
+    // Stats,
+    // Table,
 }
 
 impl Command {
@@ -167,26 +164,26 @@ impl Command {
         let argv: Vec<_> = argv.iter().map(|s| &**s).collect();
         let argv = &*argv;
         match self {
-            Command::Cat => cmd::cat::run(argv),
+            // Command::Cat => cmd::cat::run(argv),
             Command::Count => cmd::count::run(argv),
-            Command::FixLengths => cmd::fixlengths::run(argv),
-            Command::Flatten => cmd::flatten::run(argv),
-            Command::Fmt => cmd::fmt::run(argv),
-            Command::Frequency => cmd::frequency::run(argv),
-            Command::Headers => cmd::headers::run(argv),
-            Command::Help => { wout!("{}", USAGE); Ok(()) }
-            Command::Index => cmd::index::run(argv),
-            Command::Input => cmd::input::run(argv),
-            Command::Join => cmd::join::run(argv),
-            Command::Partition => cmd::partition::run(argv),
-            Command::Sample => cmd::sample::run(argv),
-            Command::Search => cmd::search::run(argv),
-            Command::Select => cmd::select::run(argv),
-            Command::Slice => cmd::slice::run(argv),
-            Command::Sort => cmd::sort::run(argv),
-            Command::Split => cmd::split::run(argv),
-            Command::Stats => cmd::stats::run(argv),
-            Command::Table => cmd::table::run(argv),
+            // Command::FixLengths => cmd::fixlengths::run(argv),
+            // Command::Flatten => cmd::flatten::run(argv),
+            // Command::Fmt => cmd::fmt::run(argv),
+            // Command::Frequency => cmd::frequency::run(argv),
+            // Command::Headers => cmd::headers::run(argv),
+            // Command::Help => { wout!("{}", USAGE); Ok(()) }
+            // Command::Index => cmd::index::run(argv),
+            // Command::Input => cmd::input::run(argv),
+            // Command::Join => cmd::join::run(argv),
+            // Command::Partition => cmd::partition::run(argv),
+            // Command::Sample => cmd::sample::run(argv),
+            // Command::Search => cmd::search::run(argv),
+            // Command::Select => cmd::select::run(argv),
+            // Command::Slice => cmd::slice::run(argv),
+            // Command::Sort => cmd::sort::run(argv),
+            // Command::Split => cmd::split::run(argv),
+            // Command::Stats => cmd::stats::run(argv),
+            // Command::Table => cmd::table::run(argv),
         }
     }
 }
